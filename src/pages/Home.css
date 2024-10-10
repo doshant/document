@@ -1,0 +1,84 @@
+/* Home.css */
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+.home-container {
+    display: flex;
+    height: 100vh; /* Full height */
+    position: relative; /* Positioning context for absolute children */
+  }
+  
+  .video-background {
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Left side width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Hide overflow */
+    z-index: -1; /* Send it behind other elements */
+  }
+  
+  .video-background video {
+    min-width: 100%; /* Cover the full width */
+    min-height: 100%; /* Cover the full height */
+    object-fit: cover; /* Ensure video covers area */
+  }
+  .company-name {
+    flex: 1; /* Takes up half of the screen */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    color: white; /* Text color */
+    z-index: 1; /* Bring above video */
+  }
+  
+  .company-name-title,
+  .company-name-subtitle {
+    font-size: 6rem; /* Same font size for both titles */
+    margin: 0; /* Remove default margin */
+  }
+  
+
+  
+  .card-container {
+    flex: 1; /* Takes up half of the screen */
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    justify-content: center; /* Center cards vertically */
+    align-items: center; /* Center cards horizontally */
+    padding: 20px;
+    gap: 20px; /* Adds space between cards */
+    z-index: 1; /* Bring above video */
+  }
+  
+  /* Keep other styles the same */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust width */
+    height: 100px; /* Set a fixed height for cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    color: #333; /* Card title color */
+    margin: 0;
+  }  
